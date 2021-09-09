@@ -35,7 +35,7 @@ jobs:
         ast_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
         github_token: ${{ secrets.GH_TOKEN }}
         scanners: ast
-        bug_tracker: GITHUBPULL
+        bug_tracker: Sarif
         params: --namespace=${{ github.repository_owner }} --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }}
 
     # Upload SARIF report for CodeQL / Security Alerts PRocessing
